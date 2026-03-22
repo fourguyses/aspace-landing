@@ -16,6 +16,11 @@
   <link rel="stylesheet" href="assets/css/section-logos.css" />
   <link rel="stylesheet" href="assets/css/section-cta.css" />
   <link rel="stylesheet" href="assets/css/footer.css" />
+  <link rel="stylesheet" href="assets/css/section-accordion.css" />
+  <link rel="stylesheet" href="assets/css/section-speedometer.css" />
+  <link rel="stylesheet" href="assets/css/section-logos.css" />
+  <link rel="stylesheet" href="assets/css/section-cta.css" />
+  <link rel="stylesheet" href="assets/css/footer.css" />
 
   <!-- LOCAL: Lenis -->
   <script src="assets/libs/lenis.min.js"></script>
@@ -32,7 +37,7 @@
   <header id="navbar" class="navbar navbar--centered">
     <div class="navbar__inner">
       <a href="#" class="navbar__logo">
-        <img src="assets/images/logo.svg" alt="aSpace" />
+        <img src="assets/images/logo.svg" alt="Droneland" />
       </a>
       <nav class="navbar__links">
         <a href="#">Platform</a>
@@ -40,8 +45,9 @@
         <a href="#">About</a>
         <a href="#">Contact</a>
       </nav>
-      <a href="#" class="navbar__cta btn btn--primary">Get started</a>
+      <a href="#" class="btn btn--dark navbar__cta">Get started</a>
     </div>
+
   </header>
 
   <main>
@@ -90,53 +96,67 @@
     </div>
 
     <!-- ═══════════════════════════════════════
-         SECTIONS 3–5 — sticky label + aerial image + corner texts
-         (same pattern × 3, data-category changes the label)
+     SECTIONS 3–5 — sticky label + aerial image
     ═══════════════════════════════════════ -->
     <div id="sticky-sections-wrapper">
 
-      <section class="sticky-section" data-category="Councils and public spaces">
-        <div class="sticky-section__intro">
-          <h2>Different landscapes, one platform.</h2>
-          <p>Your copy here.</p>
+      <!-- Section 3: Councils -->
+      <section class="sticky-section">
+        <div class="sticky-section__label">
+          <h2 class="sticky-section__heading">Councils and public spaces</h2>
+          <p class="sticky-section__desc">Manage assets, monitor change, and make evidence-based decisions across every site.</p>
         </div>
-        <div class="sticky-section__label"><!-- injected by JS --></div>
         <div class="sticky-section__image-wrap">
-          <img src="assets/images/aerial-councils.jpg" alt="" />
-          <span class="corner corner--tl">Label TL</span>
-          <span class="corner corner--tr">Label TR</span>
-          <span class="corner corner--bl">Label BL</span>
-          <span class="corner corner--br">Label BR</span>
+          <img src="assets/images/aerial-councils.jpg" alt="Councils aerial view" />
+          <div class="image-overlay-tl">
+            <h3>Enhanced parks.<br/>Thriving communities.</h3>
+          </div>
+          <div class="image-overlay-br">
+            <p>We provide clear data to help councils manage public assets, reduce complaints, and meet compliance standards.</p>
+          </div>
+          <div class="image-overlay-tr">
+            <p>We help councils make smarter, cost-saving decisions by evaluating the true impact of their assets across departments.</p>
+          </div>
         </div>
       </section>
 
-      <section class="sticky-section" data-category="Turf and professional sports">
-        <div class="sticky-section__intro">
-          <h2>Elevate your vision.<br/>Protect your turf.</h2>
-          <p>Your copy here.</p>
+      <!-- Section 4: Turf -->
+      <section class="sticky-section">
+        <div class="sticky-section__label">
+          <h2 class="sticky-section__heading">Turf and professional sports</h2>
+          <p class="sticky-section__desc">Precision data keeps playing surfaces performing at their peak, season after season.</p>
         </div>
-        <div class="sticky-section__label"><!-- injected by JS --></div>
         <div class="sticky-section__image-wrap">
-          <img src="assets/images/aerial-turf.jpg" alt="" />
-          <span class="corner corner--tl">Label TL</span>
-          <span class="corner corner--tr">Label TR</span>
-          <span class="corner corner--bl">Label BL</span>
-          <span class="corner corner--br">Label BR</span>
+          <img src="assets/images/aerial-turf.jpg" alt="Turf aerial view" />
+          <div class="image-overlay-tl">
+            <h3>Elevate your vision.<br/>Protect your turf.</h3>
+          </div>
+          <div class="image-overlay-br">
+            <p>Identify stress zones, irrigation gaps, and wear patterns before they become costly problems.</p>
+          </div>
+          <div class="image-overlay-tr">
+            <p>Precision data keeps playing surfaces performing at their peak, season after season.</p>
+          </div>
         </div>
       </section>
 
-      <section class="sticky-section" data-category="Agriculture">
-        <div class="sticky-section__intro">
-          <h2>Precision farming,<br/>smarter decisions.</h2>
-          <p>Your copy here.</p>
+      <!-- Section 5: Agriculture -->
+      <section class="sticky-section">
+        <div class="sticky-section__label">
+          <h2 class="sticky-section__heading">Agriculture</h2>
+          <p class="sticky-section__desc">Turn every hectare into actionable intelligence and stop guessing what your land needs.</p>
         </div>
-        <div class="sticky-section__label"><!-- injected by JS --></div>
         <div class="sticky-section__image-wrap">
-          <img src="assets/images/aerial-agri.jpg" alt="" />
-          <span class="corner corner--tl">Label TL</span>
-          <span class="corner corner--tr">Label TR</span>
-          <span class="corner corner--bl">Label BL</span>
-          <span class="corner corner--br">Label BR</span>
+          <img src="assets/images/aerial-agri.jpg" alt="Agriculture aerial view" />
+          <div class="image-overlay-tl">
+            <h3>Precision farming,<br/>smarter decisions.</h3>
+          </div>
+          <div class="image-overlay-br">
+            <p>Turn every hectare into actionable intelligence and stop guessing what your land needs.</p>
+          </div>
+          <div class="image-overlay-tr">
+            <p>Variable rate maps, yield prediction, and soil analysis — all from a single flight.</p>
+          </div>
         </div>
       </section>
 
@@ -145,27 +165,69 @@
     <!-- ═══════════════════════════════════════
          SECTION 6 — accordion cards on blue grid
     ═══════════════════════════════════════ -->
-    <section id="section-process" class="section-accordion">
-      <div class="section-accordion__grid-bg"><!-- SVG injected by JS --></div>
-      <h2 class="section-accordion__heading sticky-heading">
-        Our four-step process makes<br/>complex landscapes simple.
-      </h2>
-      <div class="section-accordion__cards">
-        <div class="accordion-card" data-step="01">
-          <div class="accordion-card__header">Capture</div>
-          <div class="accordion-card__body"><p>Expanded detail for step 1.</p></div>
+    <section id="section-process">
+      <div class="process__grid-bg"></div>
+
+      <div class="process__inner">
+
+        <!-- Block 1: sticky heading -->
+        <div class="process__heading-wrap">
+          <h2 class="process__heading">
+            Our four-step process makes complex landscapes simple.
+          </h2>
         </div>
-        <div class="accordion-card" data-step="02">
-          <div class="accordion-card__header">Process</div>
-          <div class="accordion-card__body"><p>Expanded detail for step 2.</p></div>
-        </div>
-        <div class="accordion-card" data-step="03">
-          <div class="accordion-card__header">Analyse</div>
-          <div class="accordion-card__body"><p>Expanded detail for step 3.</p></div>
-        </div>
-        <div class="accordion-card" data-step="04">
-          <div class="accordion-card__header">Act</div>
-          <div class="accordion-card__body"><p>Expanded detail for step 4.</p></div>
+
+        <!-- Block 2: accordion cards -->
+        <div class="process__cards">
+
+          <div class="accordion-card" data-index="0">
+            <div class="accordion-card__header">
+              <span class="accordion-card__step">01</span>
+              <span class="accordion-card__title">Capture</span>
+              <span class="accordion-card__icon">+</span>
+            </div>
+            <div class="accordion-card__body">
+              <p>We deploy drones across your site to collect high-resolution imagery, LiDAR, and multispectral data — all in a single flight.</p>
+              <a href="#" class="accordion-card__link">Learn more →</a>
+            </div>
+          </div>
+
+          <div class="accordion-card" data-index="1">
+            <div class="accordion-card__header">
+              <span class="accordion-card__step">02</span>
+              <span class="accordion-card__title">Process</span>
+              <span class="accordion-card__icon">+</span>
+            </div>
+            <div class="accordion-card__body">
+              <p>Raw data is transformed into georeferenced maps, 3D models, and calibrated indices through our processing pipeline.</p>
+              <a href="#" class="accordion-card__link">Learn more →</a>
+            </div>
+          </div>
+
+          <div class="accordion-card" data-index="2">
+            <div class="accordion-card__header">
+              <span class="accordion-card__step">03</span>
+              <span class="accordion-card__title">Analyse</span>
+              <span class="accordion-card__icon">+</span>
+            </div>
+            <div class="accordion-card__body">
+              <p>Our platform surfaces insights automatically — change detection, anomaly flags, and trend analysis delivered to your dashboard.</p>
+              <a href="#" class="accordion-card__link">Learn more →</a>
+            </div>
+          </div>
+
+          <div class="accordion-card" data-index="3">
+            <div class="accordion-card__header">
+              <span class="accordion-card__step">04</span>
+              <span class="accordion-card__title">Act</span>
+              <span class="accordion-card__icon">+</span>
+            </div>
+            <div class="accordion-card__body">
+              <p>You gain the clarity to make confident, evidence-based decisions — faster responses, reduced costs, better outcomes.</p>
+              <a href="#" class="accordion-card__link">Learn more →</a>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -173,70 +235,114 @@
     <!-- ═══════════════════════════════════════
          SECTION 7 — speedometer + 3-col stats
     ═══════════════════════════════════════ -->
-    <section id="section-stats" class="section-stats">
-      <div class="section-stats__grid-bg"><!-- SVG --></div>
-      <div class="section-stats__card">
-        <div class="section-stats__left">
-          <h2>A partner in performance.</h2>
-          <p>Your copy here.</p>
+    <section id="section-stats">
+      <div class="stats__grid-bg"></div>
+
+      <div class="stats__inner">
+
+        <!-- Block 1: card with 2 columns -->
+        <div class="stats__card">
+
+          <div class="stats__card-left">
+            <h2>A partner in<br/>performance.</h2>
+            <p>We work alongside the best in the business — bringing drone intelligence to organisations that demand precision, reliability, and results.</p>
+          </div>
+
+          <div class="stats__card-right">
+            <div class="speedometer" id="speedometer">
+              <!-- SVG arc injected by speedometer.js -->
+            </div>
+            <div class="speedometer__label">
+              <span class="speedometer__value" id="speedo-value">0</span>
+              <span class="speedometer__unit">NPS</span>
+            </div>
+          </div>
+
         </div>
-        <div class="section-stats__right">
-          <div class="speedometer" id="speedometer">
-            <!-- SVG arc injected by speedometer.js -->
-            <span class="speedometer__value">0</span>
+
+        <!-- Block 2: 3-column stats -->
+        <div class="stats__cols">
+          <div class="stat-col">
+            <h3>500+</h3>
+            <p>Sites surveyed across Australia and New Zealand</p>
+          </div>
+          <div class="stat-col">
+            <h3>98%</h3>
+            <p>Client satisfaction rate across all engagements</p>
+          </div>
+          <div class="stat-col">
+            <h3>3x</h3>
+            <p>Faster decision-making compared to traditional methods</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+     SECTION 8 — logos + quote
+    ═══════════════════════════════════════ -->
+  <div id="proof-cta-wrapper">
+    <section id="section-proof">
+      <div class="proof__inner">
+
+        <!-- Block 1: heading -->
+        <h2 class="proof__heading">
+          We've partnered with tier-one organisations
+          to deliver clarity where it matters most.
+        </h2>
+
+        <!-- Block 2: logos -->
+        <div class="proof__logos">
+          <img src="assets/images/logo-1.svg" alt="Partner 1" />
+          <img src="assets/images/logo-2.svg" alt="Partner 2" />
+          <img src="assets/images/logo-3.svg" alt="Partner 3" />
+          <img src="assets/images/logo-4.svg" alt="Partner 4" />
+        </div>
+
+        <!-- Block 3: quote -->
+        <blockquote class="proof__quote">
+          <p>"The weekly turf reports from Droneland have become a vital tool for the team at the City of Port Phillip. The data is accurate, timely, and genuinely shapes how we manage open spaces each season."</p>
+          <cite>— Operations Manager, City of Port Phillip</cite>
+        </blockquote>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+        SECTION 9 — final CTA
+    ═══════════════════════════════════════ -->
+    <section id="section-cta">
+      <div class="cta__inner">
+        <h2>We don't just provide data;<br/>we reveal what's possible.</h2>
+        <a href="#" class="btn btn--primary btn--lg">Request a demo</a>
+      </div>
+    </section>
+  </div>
+
+    <!-- ═══════════════════════════════════════
+        SECTION 10 — footer
+    ═══════════════════════════════════════ -->
+    <footer id="footer">
+      <div class="footer__inner">
+        <div class="footer__top">
+          <img src="assets/images/logo.svg" alt="aSpace" class="footer__logo" />
+          <nav class="footer__nav">
+            <a href="#">Platform</a>
+            <a href="#">Solutions</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+          </nav>
+        </div>
+        <div class="footer__bottom">
+          <p class="footer__copy">© 2024 aSpace. All rights reserved.</p>
+          <div class="footer__legal">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
           </div>
         </div>
       </div>
-      <div class="section-stats__cols">
-        <div class="stat-col"><h3>Heading</h3><p>Detail text.</p></div>
-        <div class="stat-col"><h3>Heading</h3><p>Detail text.</p></div>
-        <div class="stat-col"><h3>Heading</h3><p>Detail text.</p></div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════
-         SECTION 8 — logos + quote + parallax overlap
-    ═══════════════════════════════════════ -->
-    <section id="section-social-proof" class="section-proof">
-      <h2 class="section-proof__heading">
-        We've partnered with tier-one organisations<br/>
-        to deliver clarity where it matters most.
-      </h2>
-      <div class="section-proof__logos">
-        <img src="assets/images/logo-1.svg" alt="Partner 1" />
-        <img src="assets/images/logo-2.svg" alt="Partner 2" />
-        <img src="assets/images/logo-3.svg" alt="Partner 3" />
-      </div>
-      <blockquote class="section-proof__quote">
-        <p>"Quote text here."</p>
-        <cite>— Author, Title</cite>
-      </blockquote>
-    </section>
-
-    <!-- ═══════════════════════════════════════
-         SECTION 9 — final CTA (slides out from under S8)
-    ═══════════════════════════════════════ -->
-    <section id="section-cta" class="section-cta">
-      <h2>We don't just provide data;<br/>we reveal what's possible.</h2>
-      <a href="#" class="btn btn--primary">Request a demo</a>
-    </section>
-
-  </main>
-
-  <!-- ═══════════════════════════════════════
-       SECTION 10 — FOOTER
-  ═══════════════════════════════════════ -->
-  <footer id="footer" class="footer">
-    <div class="footer__inner">
-      <img src="assets/images/logo.svg" alt="aSpace" class="footer__logo" />
-      <nav class="footer__nav">
-        <a href="#">Privacy</a>
-        <a href="#">Terms</a>
-        <a href="#">Contact</a>
-      </nav>
-      <p class="footer__copy">© 2024 aSpace. All rights reserved.</p>
-    </div>
-  </footer>
+    </footer>
 
   <!-- JS modules -->
   <script type="module" src="assets/js/main.js"></script>

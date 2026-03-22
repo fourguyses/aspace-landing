@@ -13,3 +13,6 @@ gsap.ticker.lagSmoothing(0);
 // ─── Section modules ────────────────────────────────────────
 import './navbar.js';
 import './hero.js';
+import './accordion.js';
+import './speedometer.js';
+import './reveal.js';

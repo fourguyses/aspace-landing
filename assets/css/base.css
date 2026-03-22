@@ -36,14 +36,14 @@
 }
 
 html {
-  scroll-behavior: auto; /* Lenis handles this */
+  scroll-behavior: auto;
   font-size: 16px;
 }
 
 body {
   background-color: #0a0a0a;
   color: #ffffff;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-family: 'Archivo', -apple-system, BlinkMacSystemFont, sans-serif;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
@@ -53,15 +53,14 @@ body {
   --blue:        #1400FF;
   --blue-hover:  #2d1aff;
   --dark:        #0a0a0a;
+  --dark-hover:  #1a1a1a;       /* ← added */
   --white:       #ffffff;
   --white-muted: rgba(255, 255, 255, 0.65);
 
-  --nav-height:  68px;
-
   --text-xl: clamp(3rem, 7vw, 6.5rem);
   --text-lg: clamp(2rem, 4.5vw, 3.5rem);
-  --text-md:   clamp(1.25rem, 2.5vw, 1.75rem);
-  --text-sm:   clamp(1.1rem, 1.8vw, 1.35rem);
+  --text-md: clamp(1.25rem, 2.5vw, 1.75rem);
+  --text-sm: clamp(1.1rem, 1.8vw, 1.35rem);
 
   --container: 1200px;
   --gutter:    clamp(1.5rem, 5vw, 5rem);
@@ -80,6 +79,42 @@ h1 { font-size: var(--text-xl); font-weight: 700; line-height: 1.1; }
 h2 { font-size: var(--text-lg); font-weight: 700; line-height: 1.15; }
 h3 { font-size: var(--text-md); font-weight: 600; line-height: 1.2; }
 p  { font-size: var(--text-sm); line-height: 1.65; color: var(--white-muted); }
+
+/* ─── Buttons ────────────────────────────────────────── */
+.btn {
+  display: inline-block;
+  padding: 0.55rem 1.25rem;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  border: none;
+  transition: background 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+}
+
+.btn--primary {
+  background: var(--blue);
+  color: var(--white);
+}
+
+.btn--primary:hover {
+  background: var(--blue-hover);
+  transform: scale(1.03);
+}
+
+.btn--dark {
+  background: var(--dark);
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn--dark:hover {
+  background: var(--dark-hover);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: scale(1.03);
+}
 
 /* ─── Images ─────────────────────────────────────────── */
 img {

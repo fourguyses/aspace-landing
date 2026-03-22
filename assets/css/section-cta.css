@@ -1,0 +1,47 @@
+/* ─── Wrapper ───────────────────────────────────────── */
+#proof-cta-wrapper {
+  position: relative;
+  min-height: 250vh;
+}
+
+/* ─── Section 8: sticky, sits on top ────────────────── */
+#section-proof {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: var(--blue);
+  padding: 8rem 0 10rem;
+  overflow: hidden;
+}
+
+/* ─── Section 9: normal flow, dark bg ───────────────── */
+#section-cta {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: #0a0a0a;
+  padding: 12rem 0;
+}
+
+.cta__inner {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2.5rem;
+}
+
+.cta__inner h2 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.15;
+}
+
+.btn--lg {
+  padding: 0.85rem 2.25rem;
+  font-size: 1rem;
+}

@@ -1,0 +1,131 @@
+/* ─── Section wrapper ───────────────────────────────── */
+#section-process {
+  position: relative;
+  background: var(--blue);
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+/* ─── Dot grid fills entire section ─────────────────── */
+.process__grid-bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,0.15) 1px, transparent 1px);
+  background-size: 32px 32px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ─── Inner layout: stacked, centred ────────────────── */
+.process__inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 6rem var(--gutter);
+  min-height: 100vh;
+}
+
+/* ─── Block 1: heading — top centre ─────────────────── */
+.process__heading-wrap {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.process__heading {
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ─── Block 2: cards — full width below heading ──────── */
+.process__cards {
+  width: 100%;
+  max-width: 760px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ─── Individual card ───────────────────────────────── */
+.accordion-card {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+}
+
+.accordion-card:last-child {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* ─── Card header ───────────────────────────────────── */
+.accordion-card__header {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.5rem 0;
+  cursor: default;
+}
+
+.accordion-card__step {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.45);
+  letter-spacing: 0.08em;
+  min-width: 28px;
+}
+
+.accordion-card__title {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-weight: 600;
+  color: #fff;
+  flex: 1;
+}
+
+.accordion-card__icon {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.5);
+  transition: transform 0.4s ease, color 0.3s ease;
+  line-height: 1;
+}
+
+.accordion-card.is-open .accordion-card__icon {
+  transform: rotate(45deg);
+  color: #fff;
+}
+
+/* ─── Card body ─────────────────────────────────────── */
+.accordion-card__body {
+  height: 0;
+  overflow: hidden;
+}
+
+.accordion-card__body p {
+  padding: 0 0 1.5rem;
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 560px;
+  line-height: 1.7;
+}
+
+.accordion-card__link {
+  display: inline-block;
+  margin-bottom: 2rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  padding-bottom: 2px;
+  transition: border-color 0.2s ease;
+}
+
+.accordion-card__link:hover {
+  border-color: #fff;
+}

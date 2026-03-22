@@ -1,0 +1,120 @@
+/* ─── Section wrapper ───────────────────────────────── */
+#section-stats {
+  position: relative;
+  background: var(--blue);
+  overflow: hidden;
+  padding: 6rem 0;
+}
+
+/* ─── Dot grid (same as section 6) ──────────────────── */
+.stats__grid-bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,0.15) 1px, transparent 1px);
+  background-size: 32px 32px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ─── Inner ─────────────────────────────────────────── */
+.stats__inner {
+  position: relative;
+  z-index: 1;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 6rem var(--gutter) 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+/* ─── Card ──────────────────────────────────────────── */
+.stats__card {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 1.5rem;
+  padding: 4rem 3rem;
+}
+
+/* ─── Left column ───────────────────────────────────── */
+.stats__card-left {
+  flex: 1;
+}
+
+.stats__card-left h2 {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+}
+
+.stats__card-left p {
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.7;
+  max-width: 400px;
+}
+
+/* ─── Right column: speedometer ─────────────────────── */
+.stats__card-right {
+  flex: 0 0 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.speedometer svg {
+  width: 240px;
+  height: 140px;
+  overflow: visible;
+}
+
+/* ─── Number display ────────────────────────────────── */
+.speedometer__label {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+}
+
+.speedometer__value {
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+}
+
+.speedometer__unit {
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.08em;
+}
+
+/* ─── 3-col stats ───────────────────────────────────── */
+.stats__cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 3rem;
+}
+
+.stat-col h3 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 0.75rem;
+}
+
+.stat-col p {
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.6;
+}
