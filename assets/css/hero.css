@@ -1,7 +1,7 @@
 /* ─── Sequence: tall enough for 3 scroll segments ─── */
 #hero-sequence {
   position: relative;
-  height: 300vh;
+  height: 400vh;
 }
 
 /* ─── One sticky container, holds all panels ────────── */
@@ -24,7 +24,8 @@
 }
 
 /* Stacking order: hero on top */
-#hero      { z-index: 3; }
+#hero      { z-index: 4; }
+#satellite { z-index: 3; }
 #section-1 { z-index: 2; }
 #section-2 { z-index: 1; }
 
@@ -50,14 +51,14 @@
   object-fit: cover;
 }
 
-.hero__fg-img {
+#satellite {
   position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.72;
-  mix-blend-mode: luminosity;
+  top: -10%;
+  right: -1300px;
+  width: 150%;
+  z-index: 10;
+  pointer-events: none;
+  opacity: 1;
 }
 
 /* ─── Gradient overlay on each panel ─────────────────── */
@@ -96,4 +97,9 @@
   color: rgba(255, 255, 255, 0.7);
   max-width: 55%;
   margin: 0 auto;           /* centre the paragraph under heading */
+}
+
+/* Section-2 panel image — transparent */
+.section-2 .hero-panel__img-wrap img {
+  opacity: 0.8;
 }

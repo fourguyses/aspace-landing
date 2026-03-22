@@ -50,7 +50,7 @@ body {
 
 /* ─── Custom Properties ─────────────────────────────── */
 :root {
-  --blue:        #1400FF;
+  --blue:        #1D55D4;
   --blue-hover:  #2d1aff;
   --dark:        #0a0a0a;
   --dark-hover:  #1a1a1a;       /* ← added */
