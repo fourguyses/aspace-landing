@@ -1,0 +1,98 @@
+/* ─── Archivo Font (local) ──────────────────────────── */
+@font-face {
+  font-family: 'Archivo';
+  src: url('../fonts/Archivo-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Archivo';
+  src: url('../fonts/Archivo-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Archivo';
+  src: url('../fonts/Archivo-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Archivo';
+  src: url('../fonts/Archivo-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ─── Reset ─────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: auto; /* Lenis handles this */
+  font-size: 16px;
+}
+
+body {
+  background-color: #0a0a0a;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ─── Custom Properties ─────────────────────────────── */
+:root {
+  --blue:        #1400FF;
+  --blue-hover:  #2d1aff;
+  --dark:        #0a0a0a;
+  --white:       #ffffff;
+  --white-muted: rgba(255, 255, 255, 0.65);
+
+  --nav-height:  68px;
+
+  --text-xl: clamp(3rem, 7vw, 6.5rem);
+  --text-lg: clamp(2rem, 4.5vw, 3.5rem);
+  --text-md:   clamp(1.25rem, 2.5vw, 1.75rem);
+  --text-sm:   clamp(1.1rem, 1.8vw, 1.35rem);
+
+  --container: 1200px;
+  --gutter:    clamp(1.5rem, 5vw, 5rem);
+}
+
+/* ─── Container ─────────────────────────────────────── */
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+/* ─── Typography ─────────────────────────────────────── */
+h1 { font-size: var(--text-xl); font-weight: 700; line-height: 1.1; }
+h2 { font-size: var(--text-lg); font-weight: 700; line-height: 1.15; }
+h3 { font-size: var(--text-md); font-weight: 600; line-height: 1.2; }
+p  { font-size: var(--text-sm); line-height: 1.65; color: var(--white-muted); }
+
+/* ─── Images ─────────────────────────────────────────── */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ─── Utility ────────────────────────────────────────── */
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}

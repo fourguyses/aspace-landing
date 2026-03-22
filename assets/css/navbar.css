@@ -1,0 +1,106 @@
+/* ─── Navbar Base ───────────────────────────────────── */
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.navbar__inner {
+  pointer-events: all;
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+
+  width: fit-content;
+  padding: 0.6rem 0.6rem 0.6rem 1.5rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  /* centred by default */
+  margin: 1.25rem auto 0;
+
+  /* smooth all properties together */
+  transition:
+    margin     0.8s cubic-bezier(0.65, 0, 0.35, 1),
+    gap        0.8s cubic-bezier(0.65, 0, 0.35, 1),
+    padding    0.8s cubic-bezier(0.65, 0, 0.35, 1);
+    /* removed background transition — stays glass always */
+}
+
+/* ─── Logo ──────────────────────────────────────────── */
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  min-width: 120px; /* ensures space even if SVG has no size */
+}
+
+.navbar__logo img {
+  height: 36px; /* was 24px */
+  width: auto;
+  display: block;
+  filter: brightness(0) invert(1);
+}
+
+/* ─── Nav Links ─────────────────────────────────────── */
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  overflow: hidden;
+  max-width: 500px;
+  opacity: 1;
+  transition:
+    max-width 0.8s cubic-bezier(0.65, 0, 0.35, 1),
+    opacity   0.5s ease,
+    margin    0.8s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.navbar__links a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.navbar__links a:hover { color: #fff; }
+
+/* ─── CTA ───────────────────────────────────────────── */
+.navbar__cta {
+  display: inline-block;
+  padding: 0.55rem 1.25rem;
+  background: #1400FF;
+  color: #fff;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.navbar__cta:hover {
+  background: #2d1aff;
+  transform: scale(1.03);
+}
+
+/* ─── Collapsed State ───────────────────────────────── */
+#navbar.is-collapsed .navbar__inner {
+  margin: 1.25rem 1.5rem 0 auto;
+}
+
+#navbar.is-collapsed .navbar__links {
+  max-width: 0;
+  opacity: 0;
+  margin: 0;
+  pointer-events: none;
+}

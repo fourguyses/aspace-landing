@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>aSpace</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/navbar.css" />
+  <link rel="stylesheet" href="assets/css/hero.css" />
+  <link rel="stylesheet" href="assets/css/sections-parallax.css" />
+  <link rel="stylesheet" href="assets/css/sections-sticky.css" />
+  <link rel="stylesheet" href="assets/css/section-accordion.css" />
+  <link rel="stylesheet" href="assets/css/section-speedometer.css" />
+  <link rel="stylesheet" href="assets/css/section-logos.css" />
+  <link rel="stylesheet" href="assets/css/section-cta.css" />
+  <link rel="stylesheet" href="assets/css/footer.css" />
+
+  <!-- LOCAL: Lenis -->
+  <script src="assets/libs/lenis.min.js"></script>
+  <!-- LOCAL: GSAP core -->
+  <script src="assets/libs/gsap.min.js"></script>
+  <!-- LOCAL: ScrollTrigger plugin -->
+  <script src="assets/libs/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       NAVBAR
+  ═══════════════════════════════════════ -->
+  <header id="navbar" class="navbar navbar--centered">
+    <div class="navbar__inner">
+      <a href="#" class="navbar__logo">
+        <img src="assets/images/logo.svg" alt="aSpace" />
+      </a>
+      <nav class="navbar__links">
+        <a href="#">Platform</a>
+        <a href="#">Solutions</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </nav>
+      <a href="#" class="navbar__cta btn btn--primary">Get started</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ═══════════════════════════════════════
+     HERO SEQUENCE (hero + section 1 + section 2 unified)
+    ═══════════════════════════════════════ -->
+    <div id="hero-sequence">
+      <div id="hero-sticky">
+
+        <!-- Section 2 — bottom layer (revealed last) -->
+        <section id="section-2" class="hero-panel">
+          <div class="hero-panel__img-wrap">
+            <img src="assets/images/section2.jpg" alt="" />
+          </div>
+          <div class="hero-panel__content">
+            <h1>Clarity creates confidence.</h1>
+            <p>Your copy here.</p>
+          </div>
+        </section>
+
+        <!-- Section 1 — middle layer -->
+        <section id="section-1" class="hero-panel">
+          <div class="hero-panel__img-wrap">
+            <img src="assets/images/section1.jpg" alt="" />
+          </div>
+          <div class="hero-panel__content">
+            <h1>Unknowns are expensive.</h1>
+            <p>Your copy here.</p>
+          </div>
+        </section>
+
+        <!-- Hero — top layer, first visible on load -->
+        <section id="hero" class="hero-panel">
+          <div class="hero-panel__img-wrap hero-panel__img-wrap--mosaic">
+            <img src="assets/images/hero-bg.jpg" alt="" class="hero__bg-img" />
+            <img src="assets/images/hero-fg.jpg" alt="" class="hero__fg-img" />
+          </div>
+          <div class="hero-panel__content">
+            <h1>Better data. Better performance.</h1>
+            <p>Your copy here.</p>
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════
+         SECTIONS 3–5 — sticky label + aerial image + corner texts
+         (same pattern × 3, data-category changes the label)
+    ═══════════════════════════════════════ -->
+    <div id="sticky-sections-wrapper">
+
+      <section class="sticky-section" data-category="Councils and public spaces">
+        <div class="sticky-section__intro">
+          <h2>Different landscapes, one platform.</h2>
+          <p>Your copy here.</p>
+        </div>
+        <div class="sticky-section__label"><!-- injected by JS --></div>
+        <div class="sticky-section__image-wrap">
+          <img src="assets/images/aerial-councils.jpg" alt="" />
+          <span class="corner corner--tl">Label TL</span>
+          <span class="corner corner--tr">Label TR</span>
+          <span class="corner corner--bl">Label BL</span>
+          <span class="corner corner--br">Label BR</span>
+        </div>
+      </section>
+
+      <section class="sticky-section" data-category="Turf and professional sports">
+        <div class="sticky-section__intro">
+          <h2>Elevate your vision.<br/>Protect your turf.</h2>
+          <p>Your copy here.</p>
+        </div>
+        <div class="sticky-section__label"><!-- injected by JS --></div>
+        <div class="sticky-section__image-wrap">
+          <img src="assets/images/aerial-turf.jpg" alt="" />
+          <span class="corner corner--tl">Label TL</span>
+          <span class="corner corner--tr">Label TR</span>
+          <span class="corner corner--bl">Label BL</span>
+          <span class="corner corner--br">Label BR</span>
+        </div>
+      </section>
+
+      <section class="sticky-section" data-category="Agriculture">
+        <div class="sticky-section__intro">
+          <h2>Precision farming,<br/>smarter decisions.</h2>
+          <p>Your copy here.</p>
+        </div>
+        <div class="sticky-section__label"><!-- injected by JS --></div>
+        <div class="sticky-section__image-wrap">
+          <img src="assets/images/aerial-agri.jpg" alt="" />
+          <span class="corner corner--tl">Label TL</span>
+          <span class="corner corner--tr">Label TR</span>
+          <span class="corner corner--bl">Label BL</span>
+          <span class="corner corner--br">Label BR</span>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ═══════════════════════════════════════
+         SECTION 6 — accordion cards on blue grid
+    ═══════════════════════════════════════ -->
+    <section id="section-process" class="section-accordion">
+      <div class="section-accordion__grid-bg"><!-- SVG injected by JS --></div>
+      <h2 class="section-accordion__heading sticky-heading">
+        Our four-step process makes<br/>complex landscapes simple.
+      </h2>
+      <div class="section-accordion__cards">
+        <div class="accordion-card" data-step="01">
+          <div class="accordion-card__header">Capture</div>
+          <div class="accordion-card__body"><p>Expanded detail for step 1.</p></div>
+        </div>
+        <div class="accordion-card" data-step="02">
+          <div class="accordion-card__header">Process</div>
+          <div class="accordion-card__body"><p>Expanded detail for step 2.</p></div>
+        </div>
+        <div class="accordion-card" data-step="03">
+          <div class="accordion-card__header">Analyse</div>
+          <div class="accordion-card__body"><p>Expanded detail for step 3.</p></div>
+        </div>
+        <div class="accordion-card" data-step="04">
+          <div class="accordion-card__header">Act</div>
+          <div class="accordion-card__body"><p>Expanded detail for step 4.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         SECTION 7 — speedometer + 3-col stats
+    ═══════════════════════════════════════ -->
+    <section id="section-stats" class="section-stats">
+      <div class="section-stats__grid-bg"><!-- SVG --></div>
+      <div class="section-stats__card">
+        <div class="section-stats__left">
+          <h2>A partner in performance.</h2>
+          <p>Your copy here.</p>
+        </div>
+        <div class="section-stats__right">
+          <div class="speedometer" id="speedometer">
+            <!-- SVG arc injected by speedometer.js -->
+            <span class="speedometer__value">0</span>
+          </div>
+        </div>
+      </div>
+      <div class="section-stats__cols">
+        <div class="stat-col"><h3>Heading</h3><p>Detail text.</p></div>
+        <div class="stat-col"><h3>Heading</h3><p>Detail text.</p></div>
+        <div class="stat-col"><h3>Heading</h3><p>Detail text.</p></div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         SECTION 8 — logos + quote + parallax overlap
+    ═══════════════════════════════════════ -->
+    <section id="section-social-proof" class="section-proof">
+      <h2 class="section-proof__heading">
+        We've partnered with tier-one organisations<br/>
+        to deliver clarity where it matters most.
+      </h2>
+      <div class="section-proof__logos">
+        <img src="assets/images/logo-1.svg" alt="Partner 1" />
+        <img src="assets/images/logo-2.svg" alt="Partner 2" />
+        <img src="assets/images/logo-3.svg" alt="Partner 3" />
+      </div>
+      <blockquote class="section-proof__quote">
+        <p>"Quote text here."</p>
+        <cite>— Author, Title</cite>
+      </blockquote>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         SECTION 9 — final CTA (slides out from under S8)
+    ═══════════════════════════════════════ -->
+    <section id="section-cta" class="section-cta">
+      <h2>We don't just provide data;<br/>we reveal what's possible.</h2>
+      <a href="#" class="btn btn--primary">Request a demo</a>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 10 — FOOTER
+  ═══════════════════════════════════════ -->
+  <footer id="footer" class="footer">
+    <div class="footer__inner">
+      <img src="assets/images/logo.svg" alt="aSpace" class="footer__logo" />
+      <nav class="footer__nav">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Contact</a>
+      </nav>
+      <p class="footer__copy">© 2024 aSpace. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JS modules -->
+  <script type="module" src="assets/js/main.js"></script>
+
+</body>
+</html>

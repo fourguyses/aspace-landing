@@ -1,0 +1,1 @@
+// Navbar collapse is handled in hero.js (tied to hero-sequence scroll)
