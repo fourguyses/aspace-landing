@@ -28,12 +28,6 @@ gsap.to('#section-1', {
 ScrollTrigger.create({
   trigger: '#hero-sequence',
   start: 'top top',
-  onEnter: () => navbar.classList.add('is-collapsed'),
-  onLeaveBack: () => {
-    gsap.to(navbar, {
-      duration: 0.4,
-      ease: 'power2.out',
-      onStart: () => navbar.classList.remove('is-collapsed'),
-    });
-  },
+  onEnter:     () => navbar.classList.add('is-collapsed'),
+  onLeaveBack: () => navbar.classList.remove('is-collapsed'),
 });

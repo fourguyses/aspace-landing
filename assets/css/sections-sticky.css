@@ -14,7 +14,7 @@
   top: 0;
   z-index: 10;
   background: var(--blue);
-  padding: 1.5rem var(--gutter) 1.25rem;
+  padding: 6rem var(--gutter) 1.25rem;
 }
 
 /* ─── Category heading ──────────────────────────────── */
