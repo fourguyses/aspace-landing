@@ -1,6 +1,6 @@
 const container = document.getElementById('speedometer');
 const valueEl   = document.getElementById('speedo-value');
-const TARGET    = 59;
+const TARGET    = 90;
 
 // ─── Build SVG arc ───────────────────────────────────
 const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
